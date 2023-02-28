@@ -217,9 +217,11 @@ textarea{
 /* |||||| FOOTER |||||| */
 
 .footer{
+    width: 100%;
     background-color: #262626;
     color: white;
     margin-top: 100px;
+    padding-bottom: 3%;
 }
 
 #footer{
