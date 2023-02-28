@@ -213,6 +213,17 @@ textarea{
     box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.658);
 }
 
+button{
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border: solid ease 2px;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 10px 35px 10px 35px;
+}
 
 /* |||||| FOOTER |||||| */
 

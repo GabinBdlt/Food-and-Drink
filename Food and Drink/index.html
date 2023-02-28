@@ -56,7 +56,25 @@
 
             <!-- MENU 1 -->
             <section>
-
+                <?php
+         
+                $st = $dbb->prepare("select * from menu");
+                $st->execute();
+                $data = $st->fetchAll();
+              
+                foreach ($data as $record){
+                  
+                  echo '<b>'.$record['nom'].'</b>' ;
+                  echo '<li>' .'entrée : '.$record['entrée']  .'</li>';
+                  echo '<li>'.'plat : '.$record['plat'] .'</li>';
+                  echo '<li>'.'dessert : '.$record['dessert'] .'</li>';
+                  echo '<li>'.'boisson : '.$record['boisson'].'</li>' ;
+                  echo '<li>'.'tarif : '.$record['tarif'].'</li>' ;
+              
+                }
+              
+              
+?>
             </section>
 
             <!-- NOS PRODUCTEURS LOCAUX -->
@@ -108,6 +126,9 @@
                     <div class="mess">
                         <textarea name="Message" id="message" cols="100" rows="10" placeholder="Message"></textarea>
                     </div>
+                    <div class="bouton">
+                        <button type="submit" value="Send">Send</button>
+                    </div>
             </section>
         
             </main>
@@ -117,8 +138,8 @@
                     <div class="container flex-container foot">
                         <div class="joindre">
                             <h3>NOUS JOINDRE</h3>
-                            <p>3 Rue de la Chatolais</p>
-                            <p>35000 Rennes</p>
+                            <p>3 Rue de la Chatolais</br>
+                            35000 Rennes</p>
                             <p>Tel : 07 84 74 91 29</p>
                         </div>
                         <div class="footlogo">
@@ -126,8 +147,8 @@
                         </div>
                         <div class="horaires">
                             <h3>NOUS HORAIRES</h3>
-                            <p>Du lundi au samedi</p>
-                            <p>de 11h00 à 15h00 et de 19h00 à 23h00</p>
+                            <p>Du lundi au samedi <br>
+                            de 11h00 à 15h00 et de 19h00 à 23h00
                             <p>Le restaurant est fermé le dimanche</p>
                         </div>  
                     </div>
