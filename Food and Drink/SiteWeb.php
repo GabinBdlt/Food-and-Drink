@@ -129,10 +129,10 @@ include 'basedoneesite.php';
                     <h2>FORMULAIRES</h2>
                 </div>
                 <div class="nom">
-                    <input type="text" name="nom" placeholder="nom" minlength="2" maxlength="40">
+                    <input type="text" name="nom" placeholder="Nom" minlength="2" maxlength="40">
                 </div>
                 <div class="mail">
-                    <input type="text" name="Email" placeholder="mail" minlength="3" maxlength="60">
+                    <input type="text" name="Email" placeholder="Email" minlength="3" maxlength="60">
                 </div>
                 <div class="mess">
                     <textarea name="Message" id="message" cols="100" rows="10" placeholder="Message"></textarea>
