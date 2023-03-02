@@ -35,7 +35,7 @@ include 'basedoneesite.php';
             <div class="links">
                 <ul class="flex-container">
                     <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="menu">Menu</a></li>
                     <li><a href="#">Nos producteurs</a></li>
                     <li><a href="#">Nos références</a></li>
                     <li><a href="#">Contact</a></li>
@@ -64,7 +64,7 @@ include 'basedoneesite.php';
         </section>
 
         <!-- MENU 1 -->
-        <section>
+        <section id="menu">
             <?php
 
             $st = $dbb->prepare("select * from menu");
