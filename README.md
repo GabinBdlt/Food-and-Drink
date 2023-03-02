@@ -163,7 +163,7 @@ Depuis la page d’administration, pouvoir gérer les menus, activer ou non le f
 
 
 
-Etape 5 : Front Office
+Etape 5 : Front Office.
 
 Le client a la possibilité de :
 
