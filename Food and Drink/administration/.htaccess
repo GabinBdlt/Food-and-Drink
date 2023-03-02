@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Restricted Files"
+AuthUserFile "C:/wamp64/passwd/.htpasswd"
+Require valid-user
