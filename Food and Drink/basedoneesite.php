@@ -1,6 +1,6 @@
 <?php
 include 'database.php';
-include 'ajouter.php';
+include 'administration/ajouter.php';
 
-
+?>
 
