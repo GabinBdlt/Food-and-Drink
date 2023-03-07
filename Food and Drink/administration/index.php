@@ -33,11 +33,56 @@
         </nav>
     </header>
     <section class="change_admin_page">
+        <form action="" method="get">
         <div class="flex_center search_bar">
             <!-- input tag -->
             <input id="searchbar" onkeyup="search_menu()" type="text"
-            name="search" placeholder="Chercher un menu..">   
+            name="search" placeholder="Chercher un menu..">  
+            <div class="bouton">
+                    <button type="submit" value="submit" name="submit">search</button>  
+                </div>
         </div>
+        </form>
+
+        <!--search PHP -->
+        <?php
+    
+    include '../basedoneesite.php';
+    if(isset($_GET['menu_nom'])) {
+
+     $nom = $_GET['menu_nom'];
+     
+    
+
+        $query = "SELECT * FROM menu WHERE nom = :nom" ;
+    
+
+        $stmt = $dbb->prepare($query);
+    
+
+        $stmt->bindParam(':nom', $nom, PDO::PARAM_STR);
+    
+
+        $stmt->execute();
+    
+
+        if($stmt->rowCount() > 0) {
+
+         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+             foreach($row as $key => $value) {
+                    echo $key . ": " . $value . "<br>";
+                }
+                echo "<hr>"; 
+                
+            }
+        } else {
+            echo "veuiller entrer une recette existante";
+        }
+    }
+  
+?>
+
         <div class="flex_center admin_change">
             <h2>NOS MENUS</h2>
         </div>
